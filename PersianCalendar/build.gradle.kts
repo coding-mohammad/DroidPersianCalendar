@@ -123,7 +123,7 @@ dependencies {
     // debugImplementation("com.squareup.leakcanary:leakcanary-android:2.0-alpha-2")
     // debugImplementation("com.github.pedrovgs:lynx:1.1.0")
 
-    testImplementation("junit:junit:4.13")
+    testImplementation("junit:junit:4.13.1")
 
     androidTestImplementation("androidx.test:core:1.3.0")
     androidTestImplementation("androidx.test:runner:1.3.0")
