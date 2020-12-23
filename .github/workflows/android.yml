@@ -14,5 +14,5 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '11'
-      - name: Build with Gradle
-        run: sudo ./gradlew assemble build lint test
+      - run: java -version
+      - run: sudo ./gradlew assemble build lint test
