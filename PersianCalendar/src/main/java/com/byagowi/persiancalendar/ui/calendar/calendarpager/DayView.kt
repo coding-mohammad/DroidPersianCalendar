@@ -67,7 +67,8 @@ class DayView @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
     private var text = ""
     private var today: Boolean = false
     private var dayIsSelected: Boolean = false
-    private var hasEvent: Boolean = false
+    var hasEvent: Boolean = false
+        private set
     private var hasAppointment: Boolean = false
     private var holiday: Boolean = false
     private var textSize: Int = 0

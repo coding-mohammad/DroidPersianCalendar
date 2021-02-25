@@ -21,7 +21,7 @@ class CalendarPager @JvmOverloads constructor(
 ) : FrameLayout(context, attrs) {
 
     // Public API
-    var onDayClicked = fun(jdn: Long) {}
+    var onDayClicked = fun(jdn: Long, hasEvent: Boolean) {}
     var onDayLongClicked = fun(jdn: Long) {}
 
     // Selected month is visible current month of the pager, maybe a day is not selected on it yet
@@ -167,7 +167,7 @@ class CalendarPager @JvmOverloads constructor(
                     if (viewPager.currentItem == position) {
                         if (isEventsModification) {
                             daysAdapter.initializeMonthEvents()
-                            onDayClicked(jdn)
+                            onDayClicked(jdn, true)
                         } else {
                             onMonthSelected()
                         }

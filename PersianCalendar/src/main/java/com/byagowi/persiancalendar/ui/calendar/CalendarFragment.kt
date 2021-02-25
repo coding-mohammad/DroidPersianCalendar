@@ -142,7 +142,11 @@ class CalendarFragment : Fragment() {
         }
 
         calendarPager.run {
-            onDayClicked = fun(jdn: Long) { bringDate(jdn, monthChange = false) }
+            onDayClicked = fun(jdn: Long, hasEvent: Boolean) {
+                bringDate(jdn, monthChange = false)
+                if (hasEvent)
+                    viewPager.setCurrentItem(EVENTS_TAB, true)
+            }
             onDayLongClicked = fun(jdn: Long) { addEventOnCalendar(jdn) }
             onMonthSelected = fun() {
                 selectedMonth.let {

@@ -82,7 +82,7 @@ class DaysAdapter internal constructor(
             val jdn = itemDayView.jdn
             if (jdn == -1L) return
 
-            calendarPager.onDayClicked(jdn)
+            calendarPager.onDayClicked(jdn, itemDayView.hasEvent)
             this@DaysAdapter.selectDay(itemDayView.dayOfMonth)
         }
 
